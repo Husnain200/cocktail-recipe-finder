@@ -42,6 +42,14 @@ A web application that helps users discover cocktail recipes by searching for a 
 
 This project uses [TheCocktailDB](https://www.thecocktaildb.com/api.php).
 
+## Live Demo
+
+[Open Cocktail Recipe Finder](https://cocktail-recipe-finder-qbm6g77gv-husnain-s-projects5.vercel.app)
+
+## Source Code
+
+[View on GitHub](https://github.com/Husnain200/cocktail-recipe-finder)
+
 ## Author
 Husnain SHafique
 Software Engineering Graduate
