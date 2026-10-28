@@ -2,7 +2,7 @@ import axios from "axios";
 import express from "express";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Tell Express to use EJS for our webpages.
 app.set("view engine", "ejs");
