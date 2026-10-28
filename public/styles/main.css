@@ -1,0 +1,147 @@
+
+/* ---------- Global styles ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  background: #fff8f0;
+  color: #332923;
+  line-height: 1.7;
+}
+
+/* ---------- Main layout ---------- */
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 10px;
+  color: #9e3527;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  color: #6d3026;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  
+/* Center the cocktail name above the image */
+  text-align: center;
+  width: 100%;
+
+
+}
+
+h3 {
+  color: #9e3527;
+  margin-top: 28px;
+}
+
+/* ---------- Search form ---------- */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+input[type="text"] {
+  width: min(100%, 340px);
+  padding: 13px 15px;
+  border: 1px solid #e0cfc3;
+  border-radius: 10px;
+  background: white;
+  font-size: 16px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #9e3527;
+  box-shadow: 0 0 0 3px #9e352720;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #9e3527;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background: #78271e;
+  transform: translateY(-1px);
+}
+
+/* ---------- Recipe image ---------- */
+img {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px #33292318;
+}
+
+/* ---------- Recipe details ---------- */
+p {
+  line-height: 1.8;
+}
+
+ul {
+  display: inline-block;
+  max-width: 100%;
+  padding-left: 25px;
+  text-align: left;
+  line-height: 2;
+}
+
+li {
+  padding-left: 4px;
+}
+
+/* ---------- Error message ---------- */
+.error {
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 15px;
+  border: 1px solid #efc0bb;
+  border-radius: 10px;
+  background: #fde8e7;
+  color: #922b21;
+  text-align: center;
+}
+
+/* ---------- Mobile layout ---------- */
+@media (max-width: 600px) {
+  body {
+    padding: 25px 15px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  form button {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}

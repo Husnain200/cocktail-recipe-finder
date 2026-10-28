@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocktail Recipe Finder</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <h1>Cocktail Recipe Finder</h1>
+
+  <form action="/search" method="get">
+    <input
+      type="text"
+      name="cocktail"
+      placeholder="Enter cocktail name..."
+      required
+    >
+    <button type="submit">Search</button>
+  </form>
+
+  <% if (error) { %>
+    <p class="error"><%= error %></p>
+  <% } else { %>
+    <h2><%= cocktail.strDrink %></h2>
+
+    <img
+      src="<%= cocktail.strDrinkThumb %>"
+      alt="<%= cocktail.strDrink %>"
+      width="300"
+    >
+
+    <h3>Instructions</h3>
+    <p><%= cocktail.strInstructions %></p>
+
+    <h3>Ingredients</h3>
+    <ul>
+      <% ingredients.forEach(function(item) { %>
+        <li><%= item.measure || "" %> <%= item.name %></li>
+      <% }); %>
+    </ul>
+  <% } %>
+
+  <form action="/" method="get">
+    <button type="submit">Find Another Cocktail</button>
+  </form>
+</body>
+</html>
